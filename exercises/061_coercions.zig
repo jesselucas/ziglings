@@ -22,7 +22,7 @@
 //    const arr: [3]u8 = [3]u8{5, 6, 7};
 //    const s: []const u8 = &arr;  // to slice
 //    const p: [*]const u8 = &arr; // to many-item pointer
-//    
+//
 // 4. Single-item mutable pointers can coerce to single-item
 //    pointers pointing to an array of length 1. (Interesting!)
 //
@@ -53,7 +53,7 @@
 // 9. Tagged unions coerce to the current tagged enum.
 //
 // 10. Enums coerce to a tagged union when that tagged field is a
-//     a zero-length type that has only one value (like void).
+//     zero-length type that has only one value (like void).
 //
 // 11. Zero-bit types (like void) can be coerced into single-item
 //     pointers.

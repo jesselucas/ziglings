@@ -41,7 +41,7 @@ Verify the installation and build number of `zig` like so:
 
 ```bash
 $ zig version
-0.9.0-dev.1343+xxxxxxxxx
+0.10.0-dev.1427+xxxxxxxxx
 ```
 
 Clone this repository with Git:
@@ -61,11 +61,15 @@ $ zig build
 
 The Zig language is under very active development. In order to be current,
 Ziglings tracks **development** builds of the Zig compiler rather than
-versioned **release** builds. The last stable release was `0.7.1`, but Ziglings
-needs a dev build with pre-release version "0.9.0" and a build number at least
+versioned **release** builds. The last stable release was `0.9.1`, but Ziglings
+needs a dev build with pre-release version "0.10.0" and a build number at least
 as high as that shown in the example version check above.
 
 It is likely that you'll download a build which is _greater_ than the minimum.
+
+_(For those who cannot easily update Zig, there are also community-supported
+branches in this repo. At the moment, there's one for v0.8.1. Older version
+branches may or may not have all exercises and/or bugfixes.)_
 
 Once you have a build of the Zig compiler that works with Ziglings, they'll
 continue to work together. But keep in mind that if you update one, you may
@@ -77,9 +81,11 @@ about input:
 
 ### Version Changes
 
-* 2021-06-14 0.9.0-dev.137  - std.build.Id `.Custom` is now `.custom`
-* 2021-04-21 0.8.0-dev.1983 - std.fmt.format() `any` format string required
-* 2021-02-12 0.8.0-dev.1065 - std.fmt.format() `s` (string) format string required
+* *2022-03-19* zig 0.10.0-dev.1427 - method for getting sentinel of type changed
+* *2021-12-20* zig 0.9.0-dev.2025 - `c_void` is now `anyopaque`
+* *2021-06-14* zig 0.9.0-dev.137  - std.build.Id `.Custom` is now `.custom`
+* *2021-04-21* zig 0.8.0-dev.1983 - std.fmt.format() `any` format string required
+* *2021-02-12* zig 0.8.0-dev.1065 - std.fmt.format() `s` (string) format string required
 
 ## Advanced Usage
 
@@ -111,16 +117,11 @@ to zig-cache/bin with:
 zig build 19_install
 ```
 
-## TODO
+## What's Covered
 
-Contributions are very welcome! I'm writing this to teach myself and to create
-the learning resource I wished for. There will be tons of room for improvement:
-
-* Wording of explanations
-* Idiomatic usage of Zig
-* Additional exercises
-
-Planned exercises:
+I've decide to limit Ziglings to the core language and not
+attempt coverage of the Standard Library. Perhaps you can change
+my mind?
 
 Core Language
 
@@ -154,25 +155,17 @@ Core Language
 * [x] Sentinel termination
 * [x] Quoted identifiers @""
 * [x] Anonymous structs/tuples/lists
-* [ ] Async
-* [ ] Working with C?
+* [ ] Async <--- IN PROGRESS!
 
-Modules and the Zig Standard Library
+## Contributing
 
-* [ ] Imports
-* [ ] Allocators
-* [ ] Arraylist
-* [ ] Filesystem
-* [ ] Readers and Writers
-* [ ] Formatting
-* [ ] Random Numbers
-* [ ] Crypto
-* [ ] Threads
-* [ ] Hash Maps
-* [ ] Stacks
-* [ ] Sorting
-* [ ] Iterators
+Contributions are very welcome! I'm writing this to teach myself and to create
+the learning resource I wished for. There will be tons of room for improvement:
 
-The initial topics for these exercises were unabashedly cribbed from
-[ziglearn.org](https://ziglearn.org/). I've since moved things around
-in an order that I think best lets each topic build upon each other.
+* Wording of explanations
+* Idiomatic usage of Zig
+* Maybe additional exercises?
+
+Please see CONTRIBUTING.md in this repo for the full details.
+
+
